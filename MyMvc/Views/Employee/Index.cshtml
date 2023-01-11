@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MyMvc.Models.employee>
+
+<a asp-action="Create"  class="btn btn-info">Create</a>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(model=>model.Id)</th>
+            <th scope="col">@Html.DisplayNameFor(model=>model.FirstName)</th>
+            <th scope="col">@Html.DisplayNameFor(model=>model.LastName)</th>
+            <th scope="col">@Html.DisplayNameFor(model=>model.Job)</th>
+            <th scope="col">@Html.DisplayNameFor(model=>model.Salary)</th>
+            <th scope="col">@Html.DisplayNameFor(model=>model.HireDate)</th>
+            <th scope="col">WHAT ACTION WANT TO TAKE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@Html.DisplayFor(modelitem=>item.Id)</th>
+                <td>@Html.DisplayFor(modelitem=>item.FirstName)</td>
+                <td>@Html.DisplayFor(modelitem=>item.LastName)</td>
+                <td>@Html.DisplayFor(modelitem=>item.Job)</td>
+                <td>@Html.DisplayFor(modelitem=>item.Salary)</td>
+                <td>@Html.DisplayFor(modelitem=>item.HireDate)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Edit</a> &nbsp;&nbsp;
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>&nbsp;&nbsp;
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-info">Delete</a>
+                </td>
+            </tr>
+
+        }
+        
+        
+    </tbody>
+</table>
+
+
+
+    
+

@@ -1,0 +1,32 @@
+﻿@model MyMvc.Models.employee
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(model=>model.Id)</th>
+            <th scope="col">@Html.DisplayNameFor(model=>model.FirstName)</th>
+            <th scope="col">@Html.DisplayNameFor(model=>model.LastName)</th>
+            <th scope="col">@Html.DisplayNameFor(model=>model.Job)</th>
+            <th scope="col">@Html.DisplayNameFor(model=>model.Salary)</th>
+            <th scope="col">@Html.DisplayNameFor(model=>model.HireDate)</th>
+            <th scope="col">WHAT ACTION WANT TO TAKE</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+            <tr>
+                <th scope="row">@Html.DisplayFor(m=>m.Id)</th>
+                <td>@Html.DisplayFor(m=>m.FirstName)</td>
+                <td>@Html.DisplayFor(m=>m.LastName)</td>
+                <td>@Html.DisplayFor(m=>m.Job)</td>
+                <td>@Html.DisplayFor(m=>m.Salary)</td>
+                <td>@Html.DisplayFor(m=>m.HireDate)</td>
+                <td>
+                 <a asp-action="Index" class="btn btn-info">Back to Font View</a> 
+                </td>
+            </tr>
+
+        
+
+
+    </tbody>
+</table>
